@@ -1,97 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Josh's Portfolio</title>
-  <link href="styles.css" rel="stylesheet" type="text/css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joshua Austin — Portfolio</title>
+  <link href="styles.css" rel="stylesheet" />
 </head>
-    <body>
-        <header class ="container" >
-          <div class ="page-header">
-            <div class ="left-side">
-              <div class="brand">
-                <div>JOSHUA AUSTIN</div>
-              </div> 
-            </div>
+<body>
 
-            <div class ="middle">
-              <div class ="header">
-                  <a href ="home.html" style="color:orangered;">Home</a>
-              </div>
-              <div class ="header">
-                  <a href ="#about">About</a>
-              </div>
-              <div class ="header">
-                    <a href ="#projects">Projects</a>
-              </div>
-            </div>
+  <!-- ─── Nav ─────────────────────────────────────────────── -->
+  <header>
+    <nav class="navbar">
+      <div class="brand">Joshua Austin</div>
 
-            <div class ="right-side">
-            <label class="switch">
-              <input type="checkbox" id="darkModeToggle">
-              <span class='slider round'></span>            
-            </label>
-            </div>
+      <ul class="nav-links">
+        <li class="active"><a href="home.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+
+      <label class="switch" aria-label="Toggle dark mode">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider"></span>
+      </label>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ─── Hero / About ─────────────────────────────────── -->
+    <section class="hero" id="about">
+      <div class="hero-text">
+        <p class="eyebrow">Desktop Engineer &amp; Developer</p>
+        <h1>Hey, I'm <span>Josh</span></h1>
+        <p>
+          I bring a collaborative mindset and a strong commitment to delivering reliable
+          IT solutions. I thrive in fast-paced technical settings where problem-solving,
+          adaptability, and continuous improvement are essential. Currently expanding into
+          cybersecurity and software development — applying hands-on experience in desktop
+          support, systems troubleshooting, and end-user technology.
+        </p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="CV.docx" download>Download CV</a>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/joshua-austin-75a465195/" target="_blank" aria-label="LinkedIn">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+            <a href="https://github.com/yojoshhhh" target="_blank" aria-label="GitHub">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
           </div>
-        </header>
-      <!--About-->
-        <section class="About">
-          <div class="main">
-            <div class="detail">
-              <h5 id = "about">What's Up?</h5>
-              <h1>I'm <span style="color:orangered;">Josh</span></h1>
-              <p>In the realm of Software Engineering, I bring a collaborative spirit to the table, fostering a team environment where </p> 
-              <p>honesty and transparency are paramount. With a blend of fun camaraderie and a strong work ethic, I contribute to a </p>
-              <p>dynamic atmosphere, committed to both personal and collective growth. My unwavering enthusiasm and eagerness </p>
-              <p>to learn make me a valuable asset in navigating the evolving landscape of software development with my team.</p>
-              <div class="card">
-                <img class="myself" src="josh.png" alt="">                  
-              </div>
-            </div>
-              <div class="social">
-                <a href="https://www.linkedin.com/in/joshua-austin-75a465195/" target = "_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
-                <a href="https://github.com/yojoshhhh" target = "_blank"><ion-icon name="logo-github"></ion-icon></a>
-              </div>  
-            </div>
-        </section>
-      <!--CV-->
-      <section class="CV">
-        
-        <button onclick="location.href='CV.docx';">
-        <span class="circle1"></span>
-        <span class="circle2"></span>
-        <span class="circle3"></span>
-        <span class="circle4"></span>
-        <span class="circle5"></span>
-        <span class="text">CV</span>
-        </button>
-        
-        </section>
+        </div>
+      </div>
 
-      <!--Projects-->
-      <section class="Projects">
-        <h3 id = "projects"></h3>
-        <div class="p1">
-          <a href="https://github.com/yojoshhhh/IOS-Pokedex-Application" target = "_blank">
-            <img class="pokedex" src="Pokedex Application.png" alt="">
-          </a>                  
-        </div>
-        <div class="p2">
-          <a href="https://github.com/yojoshhhh/IOS-Pokemon-RPG-Game" target = "_blank">
-            <img class="pokemongo" src="PokemonRPG.png" alt="">
-          </a>  
-        </div>                
-        </div>
-        <div class="p3">
-          <a href="https://yojoshhhh.github.io/Bouncing-Balls/ballGame.html" target = "_blank">
-            <img class="bbg" src="BouncingBallGame.png" alt=""> 
-          </a>
-        </div>
-      </section>
+      <div class="hero-photo">
+        <img src="josh.png" alt="Joshua Austin" />
+      </div>
+    </section>
 
-      <script src = "darkmode.js"></script>  
-      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  </body>
+    <!-- ─── Projects ─────────────────────────────────────── -->
+    <section class="projects-section" id="projects">
+      <div class="section-header">
+        <h2>Featured <span>Projects</span></h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="projects-grid">
+
+        <a class="project-card" href="https://github.com/yojoshhhh/IOS-Pokedex-Application" target="_blank">
+          <div class="project-img-wrap">
+            <img src="Pokedex Application.png" alt="iOS Pokédex Application screenshot" />
+            <div class="project-overlay"><span>View on GitHub</span></div>
+          </div>
+          <div class="project-info">
+            <h3>iOS Pokédex App</h3>
+            <p>Native iOS application to browse and search Pokémon data.</p>
+          </div>
+        </a>
+
+        <a class="project-card" href="https://github.com/yojoshhhh/IOS-Pokemon-RPG-Game" target="_blank">
+          <div class="project-img-wrap">
+            <img src="PokemonRPG.png" alt="iOS Pokémon RPG Game screenshot" />
+            <div class="project-overlay"><span>View on GitHub</span></div>
+          </div>
+          <div class="project-info">
+            <h3>iOS Pokémon RPG</h3>
+            <p>Turn-based RPG game built for iOS with Swift.</p>
+          </div>
+        </a>
+
+        <a class="project-card" href="https://yojoshhhh.github.io/Bouncing-Balls/ballGame.html" target="_blank">
+          <div class="project-img-wrap">
+            <img src="BouncingBallGame.png" alt="Bouncing Ball Game screenshot" />
+            <div class="project-overlay"><span>Play Live</span></div>
+          </div>
+          <div class="project-info">
+            <h3>Bouncing Ball Game</h3>
+            <p>Canvas-based browser game with physics and a 60-second challenge.</p>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── Footer ───────────────────────────────────────────── -->
+  <footer class="footer">
+    <p>&copy; 2025 Joshua Austin. All rights reserved.</p>
+  </footer>
+
+  <script src="darkmode.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
 </html>
-  
